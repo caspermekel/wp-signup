@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qinvoice signup\n"
+"POT-Creation-Date: 2013-09-06 13:16+0100\n"
+"PO-Revision-Date: 2013-09-06 13:17+0100\n"
+"Last-Translator: Casper Mekel <casper@newday.sk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: nl_NL\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../qinvoice_signup.php:55
+msgid "Go to the settings page"
+msgstr ""
+
+#: ../qinvoice_signup.php:55
+msgid "Settings"
+msgstr ""
+
+#: ../qinvoice_signup.php:120
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: ../qinvoice_signup.php:124
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: ../qinvoice_signup.php:128
+msgid "Email"
+msgstr "Email"
+
+#: ../qinvoice_signup.php:132
+#, php-format
+msgid "I agree to the <a href=\"%s\" target=\"new\">terms and conditions</a>."
+msgstr ""
+"Ik ben akkoord met de <a href=\"%s\" target=\"new\">algemene voorwaarden</a>."
+
+#: ../qinvoice_signup.php:139
+msgid "Leave this fields emtpy/unchanged!"
+msgstr ""
+
+#: ../qinvoice_signup.php:151
+msgid "Create my free account"
+msgstr "Maak mijn gratis account"
+
+#: ../qinvoice_signup.php:154
+msgid "Success!"
+msgstr "Gefeliciteerd!"
+
+#: ../qinvoice_signup.php:155
+msgid ""
+"Your account has been created. You are being redirect to the login page."
+msgstr ""
+"Jouw account is aangemaakt. Je wordt nu doorgestuurd naar de inlogpagina."
+
+#: ../qinvoice_signup.php:156
+msgid "Thank you for choosing q-invoice."
+msgstr "Bedankt voor het kiezen voor q-invoice."
+
+#: ../qinvoice_signup.php:157
+#, php-format
+msgid "In case you aren't redirected. Please <a href=\"%s\">click here</a>."
+msgstr "Wordt je niet doorgestuurd? <a href=\"%s\">Klik hier</a>."
+
+#: ../settings.php:38
+msgid "Save Changes"
+msgstr ""

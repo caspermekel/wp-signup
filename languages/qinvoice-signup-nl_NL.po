@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qinvoice signup\n"
+"POT-Creation-Date: 2015-08-21 21:18+0100\n"
+"PO-Revision-Date: 2015-08-22 13:50+0100\n"
+"Last-Translator: Casper Mekel <casper@newday.sk>\n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../includes/class.settings.php:121
+msgid "Your channel ID, found in partner environment"
+msgstr ""
+
+#: ../includes/class.settings.php:136
+msgid ""
+"Enable this to allow referrers to be set using url/r?=1234, it will "
+"overwrite your channel id."
+msgstr ""
+
+#: ../includes/class.settings.php:150
+msgid "Main language on this website. E.g. nl_NL. Also used for user account"
+msgstr ""
+
+#: ../includes/class.settings.php:164
+msgid "URL to terms and conditions page."
+msgstr ""
+
+#: ../includes/class.settings.php:179
+msgid "URL for login link."
+msgstr ""
+
+#: ../includes/class.settings.php:194
+msgid "Account creation will be simulated. No accounts will be created!"
+msgstr ""
+
+#: ../qinvoice_signup.php:88
+msgid "Go to the settings page"
+msgstr ""
+
+#: ../qinvoice_signup.php:88
+msgid "Settings"
+msgstr ""
+
+#: ../qinvoice_signup.php:133
+msgid "Enter your email"
+msgstr "Uw emailadres"
+
+#: ../qinvoice_signup.php:133
+msgid "Please provide a valid email address"
+msgstr "Geeft u a.u.b. een geldig email-adres op"
+
+#: ../qinvoice_signup.php:133
+msgid "Email address is already in use"
+msgstr "Dit email-adres is reeds in gebruik"
+
+#: ../qinvoice_signup.php:137
+msgid "Choose a password"
+msgstr "Kies een wachtwoord"
+
+#: ../qinvoice_signup.php:137
+msgid "A password needs to be at least 5 characters"
+msgstr "Een wachtwoord dient tenminste 5 tekens te bevatten"
+
+#: ../qinvoice_signup.php:140
+msgid "Hide password"
+msgstr "Wachtwoord verbergen"
+
+#: ../qinvoice_signup.php:141
+msgid "Show password"
+msgstr "Wachtwoord tonen"
+
+#: ../qinvoice_signup.php:144
+msgid "Location of your business"
+msgstr "In welk land is uw bedrijf gevestigd?"
+
+#: ../qinvoice_signup.php:151
+msgid ""
+"I would like to receive tips & tricks by email. (You will recieve only 5 "
+"tips & tricks)"
+msgstr "Ik wil graag tips per mail ontvangen. (U ontvangt maximaal 5 tips)"
+
+#: ../qinvoice_signup.php:156
+msgid "Create my account"
+msgstr "Maak mijn account"
+
+#: ../qinvoice_signup.php:159
+#, php-format
+msgid ""
+"By signing up your agree to our <a href=\"%s\">Terms and conditions</a>."
+msgstr ""
+"Door uzelf aan te melden gaat u akkoord met de <a href=\"%s\" target=\"new"
+"\">algemene voorwaarden</a>."
+
+#: ../qinvoice_signup.php:165
+msgid "Leave this fields emtpy/unchanged!"
+msgstr ""
+
+#: ../qinvoice_signup.php:186
+msgid "Welcome!"
+msgstr "Welkom!"
+
+#: ../qinvoice_signup.php:187
+msgid ""
+"Your account has been successfully created. Please follow the link below to "
+"login using the emailaddress and password you used to register."
+msgstr ""
+"U account is aangemaakt. Volgt u a.u.b. de link hieronder om in te loggen, "
+"gebruikt u hiervoor het adres waarmee u zich zojuist heeft aangemeld."
+
+#: ../qinvoice_signup.php:189
+msgid "Click here to login"
+msgstr "Klik hier om in te loggen"
+
+#: ../qinvoice_signup.php:190
+msgid ""
+"Thank you for using our service, would you have any questions do not "
+"hesitate to contact us."
+msgstr ""
+"Bedankt voor het gebruik van onze dienst, heeft u vragen dan horen wij dat "
+"graag."
+
+#: ../qinvoice_signup.php:238
+msgid "Success!"
+msgstr "Gefeliciteerd!"
+
+#: ../qinvoice_signup.php:239
+msgid ""
+"Your account has been created. You are being redirect to the login page."
+msgstr ""
+"Jouw account is aangemaakt. Je wordt nu doorgestuurd naar de inlogpagina."
+
+#: ../qinvoice_signup.php:240
+msgid "Thank you for choosing q-invoice."
+msgstr "Bedankt voor het kiezen voor q-invoice."
+
+#: ../qinvoice_signup.php:241
+#, php-format
+msgid "In case you aren't redirected. Please <a href=\"%s\">click here</a>."
+msgstr "Wordt je niet doorgestuurd? <a href=\"%s\">Klik hier</a>."
+
+#~ msgid "Username"
+#~ msgstr "Gebruikersnaam"
+
+#~ msgid "Password"
+#~ msgstr "Wachtwoord"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Try for free"
+#~ msgstr "Probeer gratis!"
+
+#~ msgid "Create my free account"
+#~ msgstr "Maak mijn gratis account"

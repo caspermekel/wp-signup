@@ -1,0 +1,87 @@
+.button_strength{
+	font-size: 10px;
+}
+#signupForm{
+	margin: 0 !important;
+	margin-bottom: -20px !important;
+}
+#signupForm input[type="text"], #signupForm input[type="password"]{
+	margin-bottom: 5px !important;
+}
+#signupForm .form-row{
+	padding: 5px 0;
+}
+.flag{
+	padding-top: 1px;
+    background-size: 21px 21px !important;
+    background-repeat: no-repeat !important;
+    padding-left: 30px;
+}
+
+.select2-results .flag{
+    padding-top: 4px;
+}
+#signupForm .error{
+	float: right;
+	font-size: 10px;
+	color: #ce0d24;
+	display: none;
+}
+#successMessage{
+	display:none;
+	height: 387px;
+}
+@charset "utf-8";
+/* CSS Document */
+
+.strength_meter{
+	height:4px;
+	width: 100%;
+	background:#efefef;
+}
+.strength_meter p{
+	display: none;
+}
+.strength_meter div{
+	height:4px;
+	text-align:center;
+	color:black;
+	font-weight:bold;
+	line-height:23px;
+}
+.veryweak{
+	background-color: #F04040;
+border-color: #F04040!important;
+width: 25%;
+-webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+.weak{
+background-color: #FF853C;
+border-color: #FF853C!important;
+width: 50%;
+-webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+.medium{
+background-color: #FC0;
+border-color: #FC0!important;
+width: 75%;
+-webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+.strong{
+background-color: #2eb90e;
+border-color: #8DFF1C!important;
+width: 100%;
+-webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
