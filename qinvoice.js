@@ -13,10 +13,10 @@ jQuery(function($)
 		         	//console.log(result);
 		         	if(result.result == 'OK'){
 		         		_gaq.push(['_trackEvent', 'Form', 'Signup']);
-		         		form.hide();
-						$("#successMessage").fadeIn();	
-						var href = $("#successMessage").find('a').attr('href');
-						$("#successMessage").find('a').attr('href', href+'&u='+ result.username);	
+		   
+						var thankyoupage_url = $("#thankyoupage_url").text();
+						var redirect_url = thankyoupage_url + "?u="+ result.username;						
+						window.location.replace(redirect_url);		
 
 		         	}else{
 			         	$("span.error").hide();

@@ -178,7 +178,22 @@ class Qinvoice_Signup_Settings
                 'size'          => '40',
                 'description'   => __( 'URL for login link.','qinvoice-signup' )
             )
-        );  
+        );
+
+        add_settings_field(
+            'thankyoupage_url', // ID
+            'Thank-you-page URL', // Title 
+            array( $this, 'select_element_callback' ), // Callback
+            'qinvoice-signup-settings', // Page
+            'setting_section_id', // Section           
+            array(
+                'menu'          => $option,
+                'id'            => 'thankyoupage_url',
+                'size'          => '40',
+                'description'   => __( 'URL to thank you page.','qinvoice-signup' ),
+                'options'       => $this->list_pages()
+            )
+        );    
 
         add_settings_field(
             'test_mode', // ID
@@ -194,6 +209,34 @@ class Qinvoice_Signup_Settings
                 'description'   => __( 'Account creation will be simulated. No accounts will be created!','qinvoice-signup' )
             )
         );  
+
+        add_settings_field(
+            'ga_conversion_id', // ID
+            'GA Conversion ID', // Title 
+            array( $this, 'text_element_callback' ), // Callback
+            'qinvoice-signup-settings', // Page
+            'setting_section_id', // Section           
+            array(
+                'menu'          => $option,
+                'id'            => 'ga_conversion_id',
+                'size'          => '40',
+                'description'   => __( 'Google Analytics Remarketing - Conversion ID' )
+            )
+        );
+
+        add_settings_field(
+            'ga_conversion_label', // ID
+            'GA Conversion Label', // Title 
+            array( $this, 'text_element_callback' ), // Callback
+            'qinvoice-signup-settings', // Page
+            'setting_section_id', // Section           
+            array(
+                'menu'          => $option,
+                'id'            => 'ga_conversion_label',
+                'size'          => '40',
+                'description'   => __( 'Google Analytics Remarketing - Conversion Label' )
+            )
+        );
 
         
         
@@ -269,13 +312,13 @@ class Qinvoice_Signup_Settings
         $height = $args['height'];
     
         $options = get_option( $menu );
-    
+
         if ( isset( $options[$id] ) ) {
             $current = $options[$id];
         } else {
             $current = isset( $args['default'] ) ? $args['default'] : '';
         }
-    
+
         $html = sprintf( '<textarea id="%1$s" name="%2$s[%1$s]" cols="%4$s" rows="%5$s"/>%3$s</textarea>', $id, $menu, $current, $width, $height );
     
         // Displays option description.
@@ -438,3 +481,6 @@ class Qinvoice_Signup_Settings
         echo $html;
     }
 }
+
+if( is_admin() )
+    $enfold_tweaks_settings = new Enfold_Tweaks_Settings();

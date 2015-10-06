@@ -51,6 +51,8 @@ if ( !class_exists( 'Qinvoice_Signup' ) ) {
 			self::$plugin_path = trailingslashit(dirname(__FILE__));
 
 			$this->options = get_option( 'qinvoice-signup-settings' );
+			//var_dump($this->options); die;
+
 
 		}
 		
@@ -126,6 +128,7 @@ if ( !class_exists( 'Qinvoice_Signup' ) ) {
 
 		
 		public function big_form($formclass){
+			//var_dump($this->options['language']); die;
 			$form = '<form id="signupForm" class="form_big '. $this->class .'" action="'. $this->action .'">
 	  		<fieldset>
 
@@ -171,7 +174,7 @@ if ( !class_exists( 'Qinvoice_Signup' ) ) {
 			
 			$form .= '<input type="hidden" name="s_language" value="'. $this->options['language'] .'"/>';
 			$form .= '<input type="hidden" name="test_mode" value="'. $this->options['test_mode'] .'"/>';
-			
+
 
 	  		echo  '<input type="hidden" id="current_country" value="'. ip_info('','countrycode') .'">';
 			$form .= '</form>';
@@ -183,6 +186,7 @@ if ( !class_exists( 'Qinvoice_Signup' ) ) {
 			$success_msg .= '<p></p>';
 			$success_msg .= '<p><a href="'. $this->options['login_url'] .'">'. __('Click here to login','qinvoice-signup') .'</a></p>'; 
 			$success_msg .= '<p>'. __('Thank you for using our service, would you have any questions do not hesitate to contact us.','qinvoice-signup') .'</p>';
+			$success_msg .='<div id="thankyoupage_url">' . get_permalink($this->options['thankyoupage_url']) . '</div>';
 			$success_msg .='</div>';
 
 			return $form . $success_msg;
@@ -239,6 +243,53 @@ function qinvoice_signup_form($atts){
     }
 
 add_shortcode("qinvoice_signup", "qinvoice_signup_form");
+
+function qinvoice_signup_thankyoupage($atts){
+	global $wpqs;
+	$options = get_option( 'qinvoice-signup-settings' );
+
+	extract( shortcode_atts( array(
+		'formclass' => 'std_class',
+		'login_url' =>  $options['login_url'],
+		'ga_conversion_id' =>  $options['ga_conversion_id'],
+		'ga_conversion_label' =>  $options['ga_conversion_label']
+	), $atts ) );
+
+	
+	$wpqs->login_url = $login_url;
+	$wpqs->ga_conversion_id = $ga_conversion_id;
+	$wpqs->ga_conversion_label = $ga_conversion_label;
+
+
+		
+
+			$message = '<h1>'. __('Welcome!') .'</h1>';
+			$message .= '<p>'. __('Your account has been successfully created. Please follow the link below to login using the emailaddress and password you used to register.','qinvoice-signup') .'</p>';
+			$message .= '<p></p>';
+			$message .= '<p><a href="'. $login_url .'&u=' . $_GET['u'] . '">'. __('Click here to login','qinvoice-signup') .'</a></p>'; 
+			$message .= '<p>'. __('Thank you for using our service, would you have any questions do not hesitate to contact us.','qinvoice-signup') .'</p>
+			 <!-- Google Code for q-invoice signups Conversion Page -->
+           <script type="text/javascript">
+           /* <![CDATA[ */
+           var google_conversion_id = ' . $ga_conversion_id . ';
+           var google_conversion_language = "en";
+           var google_conversion_format = "3";
+           var google_conversion_color = "ffffff";
+           var google_conversion_label = "' . $ga_conversion_label . '";
+           var google_remarketing_only = false;
+           /* ]]> */
+           </script>
+           <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+           </script>
+           <noscript>
+           <div style="display:inline;">
+           <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/' . $ga_conversion_id . '/?label=' . $ga_conversion_label . '&amp;guid=ON&amp;script=0"/>
+           </div>
+           </noscript>';
+	return $message;
+    }
+
+add_shortcode("qinvoice_signup_thankyou", "qinvoice_signup_thankyoupage");
 
 
 ?>
